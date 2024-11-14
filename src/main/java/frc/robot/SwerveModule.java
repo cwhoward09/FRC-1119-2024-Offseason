@@ -2,13 +2,10 @@ package frc.robot;
 
 import javax.swing.text.Position;
 
-import com.ctre.phoenix.motorcontrol.ControlMode;
-import com.ctre.phoenix.motorcontrol.DemandType;
-import com.ctre.phoenix.motorcontrol.can.WPI_TalonFX;
 import com.revrobotics.CANSparkMax;
 import com.revrobotics.RelativeEncoder;
-import com.revrobotics.SparkMaxPIDController;
-import com.revrobotics.CANSparkMaxLowLevel.MotorType;
+import com.revrobotics.SparkPIDController;
+import com.revrobotics.CANSparkLowLevel.MotorType;
 
 import edu.wpi.first.math.controller.SimpleMotorFeedforward;
 import edu.wpi.first.math.geometry.Rotation2d;
@@ -20,7 +17,6 @@ import edu.wpi.first.wpilibj.RobotController;
 import frc.lib.math.Conversions;
 import frc.lib.math.OnBoardModuleState;
 import frc.lib.util.CANSparkMaxUtil;
-import frc.lib.math.OnBoardModuleState;
 import frc.lib.util.SwerveModuleConstants;
 import frc.lib.util.CANSparkMaxUtil.Usage;
 
@@ -40,8 +36,8 @@ public class SwerveModule {
     private RelativeEncoder driveEncoder;
 
     private RelativeEncoder integratedAngleEncoder;
-    private final SparkMaxPIDController angleController;
-    private final SparkMaxPIDController driveController;
+    private final SparkPIDController angleController;
+    private final SparkPIDController driveController;
 
    // private final WPI_TalonFX test = new WPI_TalonFX(43);
 
